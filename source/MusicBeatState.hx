@@ -34,6 +34,7 @@ class MusicBeatState extends FlxUIState
 	#if android
 	var virtualPad:FlxVirtualPad;
 	var androidControls:AndroidControls;
+	var _pad:FlxVirtualPad;
 	var trackedinputsUI:Array<FlxActionInput> = [];
 	var trackedinputsNOTES:Array<FlxActionInput> = [];
 
@@ -82,14 +83,11 @@ class MusicBeatState extends FlxUIState
 		androidControls.visible = false;
 		add(androidControls);
 		
-		if (PlayState.SONG.dodgeEnabled)
-                {
-                        _virtualpad = new FlxVirtualPad(NONE, A);
-		        _virtualpad.alpha = 0.75;
-                        _virtualpad.cameras = [camcontrol];
-                        _virtualpad.visible = false;
-		        add(_virtualpad);
-                }
+		_pad = new FlxVirtualPad(NONE, A);
+		_pad.alpha = 0.75;
+		_pad.visible = false;
+		_pad.cameras = [camControls];
+		add(_pad);
              
 	}
 
