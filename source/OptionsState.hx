@@ -106,12 +106,7 @@ class OptionsState extends MusicBeatState
 		if (controls.BACK) {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			MusicBeatState.switchState(new MainMenuState());
-			#if android
-			flixel.addons.transition.FlxTransitionableState.skipNextTransOut = true;
-			FlxG.resetState();
-			#else
-			close();
-			#end
+			
 		}
 
 		if (controls.ACCEPT) {
