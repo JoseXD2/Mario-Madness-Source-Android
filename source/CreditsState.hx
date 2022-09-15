@@ -158,7 +158,7 @@ class CreditsState extends MusicBeatState
 		changeSelection();
 		
 		#if android
-		addVirtualPad(LEFT_FULL, A_B);
+		addVirtualPad(UP_DOWN, A_B);
 		#end
 			
 		super.create();
