@@ -2840,7 +2840,7 @@ class PlayState extends MusicBeatState
 		}
 		doDeathCheck();
 
-		if (controls.DODGE && !inCutscene && !endingSong && !isDodging && !canDodge && curStage == 'exeport'){ //PONELE MÁS REQUISITOS LA CTM
+		if (controls.ACCEPT && !inCutscene && !endingSong && !isDodging && !canDodge && curStage == 'exeport'){ //PONELE MÁS REQUISITOS LA CTM
 			boyfriend.playAnim('dodge', true);
 			isDodging = true;
 			canDodge = true;
