@@ -14,7 +14,7 @@ class FlxVideo extends FlxBasic {
 	#if VIDEOS_ALLOWED
 	public var finishCallback:Void->Void = null;
 	
-	#if desktop
+	#if (desktop && android)
 	public static var vlcBitmap:VlcBitmap;
 	#end
 
@@ -71,7 +71,7 @@ class FlxVideo extends FlxBasic {
 	function checkFile(fileName:String):String
 	{
 		var pDir = "";
-		var appDir = "file:///" + Sys.getCwd() + "/";
+		var appDir = "file:///" + Main.path + "/";
 
 		if (fileName.indexOf(":") == -1) // Not a path
 			pDir = appDir;
