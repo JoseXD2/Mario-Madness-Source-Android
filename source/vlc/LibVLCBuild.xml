@@ -12,6 +12,11 @@
 		<lib name='${CPP_DIR}/lib/libvlccore.lib' if='windows'/>
 	</target>
 
+	<target id="haxe" tool="linker" if="android">
+		<lib name='${CPP_DIR}/ndll/Android/libvlc-v7.so' if='android'/>
+		<lib name='${CPP_DIR}/ndll/Android/libvlc-64.so' if='android'/>
+	</target>
+	
 	<target id="haxe" tool="linker" if="macos">
             <flag value="-framework"/>
             <flag value="OpenGL"/>
