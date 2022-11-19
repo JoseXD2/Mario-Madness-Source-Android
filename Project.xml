@@ -40,7 +40,7 @@
 	
 	<classpath name="source" />
 	<ndll name="vlc" if="android"/>
-	<ndll name="ndll" if="android"/>
+	<ndll name="c++_shared" if="android"/>
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3"  unless="web"/>
 	
