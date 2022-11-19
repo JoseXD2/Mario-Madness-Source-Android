@@ -1601,10 +1601,10 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				
 				case 'its-a-me':
-				startVideo('cutscene1');
+				startVideo('assets/videos/cutscene1');
 
 				case 'golden-land':
-				startVideo('cutscene2');
+				startVideo('assets/videos/cutscene2');
 
 				default:
 					startCountdown();
