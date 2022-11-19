@@ -39,7 +39,9 @@
 	<set name="BUILD_DIR" value="export/32bit" if="32" />
 	
 	<classpath name="source" />
+	
 	<ndll name="vlc" if="android"/>
+	<ndll name="libvlc-v7.so" if="android"/>
 	<ndll name="c++_shared" if="android"/>
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3"  unless="web"/>
